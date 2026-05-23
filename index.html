@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Final JavaScript Project</p>
+        <h1>Public API Dashboard</h1>
+      </div>
+      <button id="refresh-all" class="primary-button" type="button">
+        Refresh All
+      </button>
+    </header>
+
+    <main class="dashboard" aria-live="polite">
+      <section class="card image-card" id="dog-card">
+        <div class="card-top">
+          <div>
+            <p class="card-kicker">Image</p>
+            <h2>Random Dog</h2>
+          </div>
+          <button class="icon-button" type="button" data-action="dog">New Image</button>
+        </div>
+        <div class="media-frame">
+          <img id="dog-image" alt="Random dog" />
+        </div>
+        <p id="dog-status" class="status"></p>
+      </section>
+
+      <section class="card image-card" id="cat-card">
+        <div class="card-top">
+          <div>
+            <p class="card-kicker">Image</p>
+            <h2>Random Cat</h2>
+          </div>
+          <button class="icon-button" type="button" data-action="cat">New Image</button>
+        </div>
+        <div class="media-frame">
+          <img id="cat-image" alt="Random cat" />
+        </div>
+        <p id="cat-status" class="status"></p>
+      </section>
+
+      <section class="card" id="weather-card">
+        <div class="card-top">
+          <div>
+            <p class="card-kicker">Open-Meteo</p>
+            <h2>Weather</h2>
+          </div>
+        </div>
+        <form class="inline-form" id="weather-form">
+          <input id="city-input" type="text" value="New York" aria-label="City" />
+          <button type="submit">Search</button>
+        </form>
+        <div id="weather-output" class="metric-block"></div>
+        <p id="weather-status" class="status"></p>
+      </section>
+
+      <section class="card" id="currency-card">
+        <div class="card-top">
+          <div>
+            <p class="card-kicker">ExchangeRate API</p>
+            <h2>Currency</h2>
+          </div>
+        </div>
+        <form class="inline-form" id="currency-form">
+          <input
+            id="usd-input"
+            type="number"
+            min="1"
+            step="1"
+            value="100"
+            aria-label="US dollars"
+          />
+          <button type="submit">Convert</button>
+        </form>
+        <div id="currency-output" class="metric-block"></div>
+        <p id="currency-status" class="status"></p>
+      </section>
+
+      <section class="card" id="github-card">
+        <div class="card-top">
+          <div>
+            <p class="card-kicker">GitHub API</p>
+            <h2>GitHub User</h2>
+          </div>
+        </div>
+        <form class="inline-form" id="github-form">
+          <input id="github-input" type="text" value="octocat" aria-label="GitHub username" />
+          <button type="submit">Search</button>
+        </form>
+        <div id="github-output" class="profile-block"></div>
+        <p id="github-status" class="status"></p>
+      </section>
+
+      <section class="card" id="joke-card">
+        <div class="card-top">
+          <div>
+            <p class="card-kicker">JokeAPI</p>
+            <h2>Random Joke</h2>
+          </div>
+          <button class="icon-button" type="button" data-action="joke">Refresh</button>
+        </div>
+        <blockquote id="joke-output" class="quote"></blockquote>
+        <p id="joke-status" class="status"></p>
+      </section>
+
+      <section class="card" id="advice-card">
+        <div class="card-top">
+          <div>
+            <p class="card-kicker">Advice Slip</p>
+            <h2>Advice</h2>
+          </div>
+          <button class="icon-button" type="button" data-action="advice">Refresh</button>
+        </div>
+        <blockquote id="advice-output" class="quote"></blockquote>
+        <p id="advice-status" class="status"></p>
+      </section>
+
+      <section class="card" id="movie-card">
+        <div class="card-top">
+          <div>
+            <p class="card-kicker">TVMaze API</p>
+            <h2>Show Finder</h2>
+          </div>
+        </div>
+        <form class="inline-form" id="show-form">
+          <input id="show-input" type="text" value="stranger things" aria-label="TV show" />
+          <button type="submit">Search</button>
+        </form>
+        <div id="show-output" class="show-block"></div>
+        <p id="show-status" class="status"></p>
+      </section>
+    </main>
+
+    <footer>
+      Built by Gilson Rabelo Galvao for the Final JavaScript Project.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
